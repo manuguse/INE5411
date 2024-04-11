@@ -44,8 +44,8 @@
 	
 	# carregando va e vc para comprovar a funcionalidade, 
 	# apesar de ser mantido o mesmo valor
-	lw $t5, 0($t0)
-	lw $t6, 0($t2)
+	lw $t3, 0($t0)
+	lw $t4, 0($t2)
 	
 	# printamos "a) "
 	li $v0, 4
@@ -54,7 +54,7 @@
 	
 	# printamos o resultado de a
 	li $v0, 1 
-	move $a0, $t5 
+	move $a0, $t3 
 	syscall
 	
 	# quebramos a linha
@@ -69,5 +69,5 @@
 	
 	# printamos o resultado de c
 	li $v0, 1 
-	move $a0, $t6
+	move $a0, $t4
 	syscall

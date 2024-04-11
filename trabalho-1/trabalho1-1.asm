@@ -6,9 +6,9 @@
 	a: .asciiz "a) "
 	c: .asciiz "c) "
 
-	va: .word    # não é necessario inicializar um valor
+	va: .word 0  # não é necessario inicializar um valor
 	vb: .word 4  # inicializando valor
-	vc: .word    # não é necessario inicializar um valor
+	vc: .word 0  # não é necessario inicializar um valor
 	vd: .word 2  # inicializando valor
 	ve: .word 1  # inicializando valor
 
