@@ -14,7 +14,7 @@
 
 .data 
    
-    vector: .word 11, 2, 3, 14, 15
+    vector: .word 13, 2, 33, 14, 142
     n: .word 5
     result: .asciiz "a soma é: "
 
@@ -50,8 +50,8 @@
 
         beq $a0, $zero, base_case # verifica se n == 0
 
-        lw $t1, 0($a1)      # t1 = vector[0]
-        addi $a1, $a1, 4    # a1 = &vector[1]
+        lw $t1, 0($a1)      # t1 = vector[i]
+        addi $a1, $a1, 4    # a1 = &vector[i+1]
         addi $a0, $a0, -1   # n -= 1
 
         jal sum             # chama sum(vector, n - 1)

@@ -65,14 +65,14 @@ main:
 
 product:
 
-    addi $sp, $sp, -4   # ajusta o ponteiro da pilha
+    subi $sp, $sp, 4   # ajusta o ponteiro da pilha
     sw $ra, 0($sp)      # salva o endereço de retorno
 
     # verifica se b == 0
     beq $a1, $zero, base_case   # se for, pula para o caso base
 
     # caso recursivo (a + product(a, b - 1))
-    addi $a1, $a1, -1   # decrementa b
+    subi $a1, $a1, 1   # decrementa b
     jal product         # chama a função recursivamente
     add $v0, $a0, $v0   # soma a com o resultado da chamada recursiva
 
